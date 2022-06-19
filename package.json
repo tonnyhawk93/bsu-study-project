@@ -1,0 +1,25 @@
+{
+  "name": "bsu-study-project",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start:back": "nodemon ./index.js",
+    "start:front": "npm start --prefix front",
+    "dev": "concurrently \"npm run start:back\" \"npm run start:front\"",
+    "start": "node ./index.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^2.0.16",
+    "concurrently": "^7.2.1"
+  },
+  "dependencies": {
+    "@faker-js/faker": "^7.2.0",
+    "express": "^4.18.1",
+    "faker": "^6.6.6"
+  }
+}

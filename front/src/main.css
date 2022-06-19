@@ -1,0 +1,5 @@
+@import url("antd/dist/antd.css");
+
+.App {
+  min-height: 100vh;
+}

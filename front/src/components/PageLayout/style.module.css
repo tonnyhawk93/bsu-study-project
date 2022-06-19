@@ -1,0 +1,21 @@
+.layout {
+  height: 100vh;
+}
+.header {
+  background-color: seagreen !important;
+}
+.headerText {
+  color: white !important;
+}
+
+.content {
+  padding: 20px;
+  height: 100%;
+  background-color: white;
+}
+
+.content_center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
