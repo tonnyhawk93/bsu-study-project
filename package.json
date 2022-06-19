@@ -11,6 +11,7 @@
     "install:all": "npm ci && npm ci --prefix front",
     "build": "npm run build --prefix front",
     "dev": "concurrently \"npm run start:back\" \"npm run start:front\"",
+    "heroku-postbuild": "npm ci --prefix front && npm run build",
     "start": "node ./index.js"
   },
   "author": "",
