@@ -20,3 +20,7 @@ export function createOkMessage() {
 export function isAnalysisOk() {
     return faker.helpers.arrayElement([true, false]);
 }
+
+export function getDiagnosisList() {
+  return DIAGNOSIS;
+}

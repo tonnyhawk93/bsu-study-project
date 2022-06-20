@@ -1,0 +1,62 @@
+{
+    "swagger": "2.0",
+    "info": {
+      "version": "1.0.0", 
+      "title": "Medical Analizator Project",
+      "license": {
+        "name": "MIT",
+        "url": "https://opensource.org/licenses/MIT"
+      }
+    },
+    "host": "localhost:4000",
+    "basePath": "/",
+    "tags": [
+      {
+        "name": "Diagnosis"
+      }
+    ],
+    "schemes": ["http"],
+    "consumes": ["application/json"],
+    "produces": ["application/json"],
+    "paths": {
+        "/api/diagnosis": {
+          "get": {
+            "tags": ["Diagnosis"],
+            "summary": "Get diagnosis",
+            "responses": {
+              "200": {
+                "description": "OK",
+                "schema": {
+                  "$ref": "#/definitions/Diagnosis"
+                }
+              }
+            }
+          }
+        }
+      },
+      "definitions": {
+        "Diagnosis": {
+          "required": ["name", "_id", "description", "type"],
+          "properties": {
+            "_id": {
+              "type": "integer",
+              "uniqueItems": true
+            },
+            "description": {
+              "type": "string"
+            },
+            "name": {
+              "type": "string"
+            },
+            "type": {
+              "type": "string"
+            }
+          }
+        },
+        "DiagnosisList": {
+            "type": "array",
+            "$ref": "#/definitions/Diagnosis"
+        }
+      }
+  }
+  
