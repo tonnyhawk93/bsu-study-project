@@ -1,5 +1,5 @@
 import React from "react";
-import { Button, Row, Typography } from "antd";
+import { Button, Row } from "antd";
 import PageLayout from "../../components/PageLayout";
 import BloodAnalysisForm from "../../components/BloodAnalysisForm";
 import DiagnosisCard from "../../components/DiagnosisCard";

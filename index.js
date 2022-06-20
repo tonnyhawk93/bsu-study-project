@@ -16,7 +16,7 @@ app.get('/api/diagnosis', (req, res) => {
     res.send(JSON.stringify(diagnosis)); 
 });
 
-app.get('/', (req, res) => {
+app.get('*', (req, res) => {
     res.sendFile(path.join(__dirname, 'build', 'index.html'))
 });
 

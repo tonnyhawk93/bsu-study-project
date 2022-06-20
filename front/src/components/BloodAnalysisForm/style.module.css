@@ -7,3 +7,9 @@
 .button {
   background-color: seagreen !important;
 }
+
+@media (min-width: 320px) and (max-width: 500px) {
+  .container {
+    width: calc(100vw - 10px);
+  }
+}

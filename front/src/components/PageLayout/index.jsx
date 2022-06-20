@@ -1,5 +1,5 @@
 import React from "react";
-import { Button, Layout, Typography } from "antd";
+import { Layout, Typography } from "antd";
 import style from "./style.module.css";
 import { Link } from "react-router-dom";
 
