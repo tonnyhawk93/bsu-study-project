@@ -1,11 +1,11 @@
-FROM node:16
+FROM node:14
 
 WORKDIR /app
 
-COPY package.json .
-COPY package-lock.json .
-COPY ./front/package.json .
-COPY ./front/package-lock.json .
+COPY ["package.json", "package-lock.json", "./"]
+
+COPY ["./front/package.json", "./front/package-lock.json", "./front/"]
+
 
 RUN npm run install:all
 
