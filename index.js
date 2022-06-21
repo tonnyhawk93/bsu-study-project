@@ -18,15 +18,15 @@ app.use(express.static(path.join(__dirname, 'front/build')));
 
 app.use('/api', apiRouter);
 
-app.get('/*', (req, res) => {
-    res.sendFile(path.join(__dirname, 'front', 'build', 'index.html'))
-});
-
 app.use(
     '/api-docs',
     swaggerUi.serve, 
     swaggerUi.setup(swaggerDocument)
-  );  
+  ); 
+
+app.get('/*', (req, res) => {
+    res.sendFile(path.join(__dirname, 'front', 'build', 'index.html'))
+}); 
 
 app.listen(PORT, () => {
     console.log(`server listen port ${PORT}`)

@@ -18,7 +18,11 @@ const FormPage = () => {
     <PageLayout>
       {diagnosis ? (
         <>
-          <DiagnosisCard {...diagnosis} />
+          {diagnosis.length > 0 ? (
+            diagnosis.map((d) => <DiagnosisCard {...d} />)
+          ) : (
+            <DiagnosisCard {...diagnosis} />
+          )}
         </>
       ) : (
         <BloodAnalysisForm onSubmit={handleSubmit} />
