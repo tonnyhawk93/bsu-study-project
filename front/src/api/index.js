@@ -6,3 +6,10 @@ export const fetchDiagnosis = async () => {
 
   return data;
 };
+
+export const fetchRecommendation = async () => {
+  const res = await fetch(`${BASE_URL}/recommendation`);
+  const data = await res.json();
+
+  return data;
+};

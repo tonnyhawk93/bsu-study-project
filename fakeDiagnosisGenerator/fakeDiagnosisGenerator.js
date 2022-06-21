@@ -30,3 +30,10 @@ export function getDiagnosisList() {
 export function getRandomCount() {
   return Math.ceil(Math.random() * 10)
 }
+
+export function getRecommendation() {
+  return {
+    id: faker.datatype.uuid(),
+    description: faker.lorem.paragraph(20),
+  };
+}

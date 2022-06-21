@@ -1,5 +1,5 @@
 import {Router} from "express";
-import {createRandomDiagnosis, isAnalysisOk, createOkMessage, getDiagnosisList, getRandomCount} from "./fakeDiagnosisGenerator/fakeDiagnosisGenerator.js";
+import {createRandomDiagnosis, isAnalysisOk, createOkMessage, getDiagnosisList, getRecommendation, getRandomCount} from "./fakeDiagnosisGenerator/fakeDiagnosisGenerator.js";
 
 const apiRouter = new Router();
 
@@ -11,6 +11,10 @@ apiRouter
     .get('/diagnosisList', (req, res) => {
         const diagnosis = getDiagnosisList();
         res.send(JSON.stringify(diagnosis)); 
+    })
+    .get('/recommendation', (req, res) => {
+        const recommendation = getRecommendation();
+        res.send(JSON.stringify(recommendation)); 
     });
 
 export {apiRouter};
